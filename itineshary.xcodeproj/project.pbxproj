@@ -15,6 +15,8 @@
 		184B7C0823D0FBAB00533BCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184B7C0623D0FBAB00533BCA /* LaunchScreen.storyboard */; };
 		184B7C1323D0FBAC00533BCA /* itinesharyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7C1223D0FBAC00533BCA /* itinesharyTests.swift */; };
 		184B7C1E23D0FBAC00533BCA /* itinesharyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7C1D23D0FBAC00533BCA /* itinesharyUITests.swift */; };
+		184B7C2C23D0FBF200533BCA /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7C2B23D0FBF200533BCA /* Places.swift */; };
+		184B7C2E23D0FCF900533BCA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7C2D23D0FCF900533BCA /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		184B7C1923D0FBAC00533BCA /* itinesharyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = itinesharyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		184B7C1D23D0FBAC00533BCA /* itinesharyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itinesharyUITests.swift; sourceTree = "<group>"; };
 		184B7C1F23D0FBAC00533BCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184B7C2B23D0FBF200533BCA /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
+		184B7C2D23D0FCF900533BCA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		184B7BEF23D0FBA600533BCA = {
 			isa = PBXGroup;
 			children = (
+				184B7C2D23D0FCF900533BCA /* Constants.swift */,
 				184B7BFA23D0FBA600533BCA /* itineshary */,
 				184B7C1123D0FBAC00533BCA /* itinesharyTests */,
 				184B7C1C23D0FBAC00533BCA /* itinesharyUITests */,
@@ -106,6 +111,7 @@
 				184B7C0423D0FBAB00533BCA /* Assets.xcassets */,
 				184B7C0623D0FBAB00533BCA /* LaunchScreen.storyboard */,
 				184B7C0923D0FBAB00533BCA /* Info.plist */,
+				184B7C2B23D0FBF200533BCA /* Places.swift */,
 			);
 			path = itineshary;
 			sourceTree = "<group>";
@@ -259,9 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184B7C2E23D0FCF900533BCA /* Constants.swift in Sources */,
 				184B7C0023D0FBA600533BCA /* ViewController.swift in Sources */,
 				184B7BFC23D0FBA600533BCA /* AppDelegate.swift in Sources */,
 				184B7BFE23D0FBA600533BCA /* SceneDelegate.swift in Sources */,
+				184B7C2C23D0FBF200533BCA /* Places.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
