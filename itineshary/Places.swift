@@ -9,11 +9,6 @@
 
 import Foundation
 
-struct CountriesList: Codable {
-    let countries: [Country]
-}
-
-struct Country: Codable {
-    let name: String
-    let cities: [String]
+struct CountriesList: Decodable {
+    let countries: [String:String]
 }

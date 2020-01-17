@@ -17,6 +17,7 @@
 		184B7C1E23D0FBAC00533BCA /* itinesharyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7C1D23D0FBAC00533BCA /* itinesharyUITests.swift */; };
 		184B7C2C23D0FBF200533BCA /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7C2B23D0FBF200533BCA /* Places.swift */; };
 		184B7C2E23D0FCF900533BCA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7C2D23D0FCF900533BCA /* Constants.swift */; };
+		184B7C3023D1054B00533BCA /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7C2F23D1054B00533BCA /* PlacesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		184B7C1F23D0FBAC00533BCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		184B7C2B23D0FBF200533BCA /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		184B7C2D23D0FCF900533BCA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		184B7C2F23D1054B00533BCA /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				184B7BFB23D0FBA600533BCA /* AppDelegate.swift */,
 				184B7BFD23D0FBA600533BCA /* SceneDelegate.swift */,
 				184B7BFF23D0FBA600533BCA /* ViewController.swift */,
+				184B7C2F23D1054B00533BCA /* PlacesViewController.swift */,
 				184B7C0123D0FBA600533BCA /* Main.storyboard */,
 				184B7C0423D0FBAB00533BCA /* Assets.xcassets */,
 				184B7C0623D0FBAB00533BCA /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184B7C3023D1054B00533BCA /* PlacesViewController.swift in Sources */,
 				184B7C2E23D0FCF900533BCA /* Constants.swift in Sources */,
 				184B7C0023D0FBA600533BCA /* ViewController.swift in Sources */,
 				184B7BFC23D0FBA600533BCA /* AppDelegate.swift in Sources */,
