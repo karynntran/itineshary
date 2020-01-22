@@ -10,7 +10,7 @@
 		184B7BFC23D0FBA600533BCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7BFB23D0FBA600533BCA /* AppDelegate.swift */; };
 		184B7BFE23D0FBA600533BCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7BFD23D0FBA600533BCA /* SceneDelegate.swift */; };
 		184B7C0023D0FBA600533BCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7BFF23D0FBA600533BCA /* ViewController.swift */; };
-		184B7C0323D0FBA600533BCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184B7C0123D0FBA600533BCA /* Main.storyboard */; };
+		184B7C0323D0FBA600533BCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184B7C0123D0FBA600533BCA /* Main.storyboard */; settings = {ASSET_TAGS = (breakfast, ); }; };
 		184B7C0523D0FBAB00533BCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184B7C0423D0FBAB00533BCA /* Assets.xcassets */; };
 		184B7C0823D0FBAB00533BCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184B7C0623D0FBAB00533BCA /* LaunchScreen.storyboard */; };
 		184B7C1323D0FBAC00533BCA /* itinesharyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7C1223D0FBAC00533BCA /* itinesharyTests.swift */; };
@@ -18,6 +18,8 @@
 		184B7C2C23D0FBF200533BCA /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7C2B23D0FBF200533BCA /* Places.swift */; };
 		184B7C2E23D0FCF900533BCA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7C2D23D0FCF900533BCA /* Constants.swift */; };
 		184B7C3023D1054B00533BCA /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7C2F23D1054B00533BCA /* PlacesViewController.swift */; };
+		184B7C3223D7669400533BCA /* Inputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7C3123D7669400533BCA /* Inputs.swift */; };
+		184B7C3823D76EE100533BCA /* RecosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7C3723D76EE100533BCA /* RecosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		184B7C2B23D0FBF200533BCA /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		184B7C2D23D0FCF900533BCA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		184B7C2F23D1054B00533BCA /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		184B7C3123D7669400533BCA /* Inputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inputs.swift; sourceTree = "<group>"; };
+		184B7C3723D76EE100533BCA /* RecosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				184B7C0623D0FBAB00533BCA /* LaunchScreen.storyboard */,
 				184B7C0923D0FBAB00533BCA /* Info.plist */,
 				184B7C2B23D0FBF200533BCA /* Places.swift */,
+				184B7C3123D7669400533BCA /* Inputs.swift */,
+				184B7C3723D76EE100533BCA /* RecosViewController.swift */,
 			);
 			path = itineshary;
 			sourceTree = "<group>";
@@ -199,6 +205,10 @@
 		184B7BF023D0FBA600533BCA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					activity,
+					breakfast,
+				);
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = karynntran;
@@ -274,6 +284,8 @@
 				184B7BFC23D0FBA600533BCA /* AppDelegate.swift in Sources */,
 				184B7BFE23D0FBA600533BCA /* SceneDelegate.swift in Sources */,
 				184B7C2C23D0FBF200533BCA /* Places.swift in Sources */,
+				184B7C3223D7669400533BCA /* Inputs.swift in Sources */,
+				184B7C3823D76EE100533BCA /* RecosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

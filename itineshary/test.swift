@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RecosViewController.swift
 //  itineshary
 //
 //  Created by Karynn Elio on 1/16/20.
@@ -8,10 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class RecosViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("hello")
+
     }
     
 }
