@@ -20,6 +20,8 @@
 		184B7C3023D1054B00533BCA /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7C2F23D1054B00533BCA /* PlacesViewController.swift */; };
 		184B7C3223D7669400533BCA /* Inputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7C3123D7669400533BCA /* Inputs.swift */; };
 		184B7C3823D76EE100533BCA /* RecosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B7C3723D76EE100533BCA /* RecosViewController.swift */; };
+		18623A6D23D9F428005C0113 /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18623A6C23D9F428005C0113 /* CountriesViewController.swift */; };
+		18623A6F23DA08F1005C0113 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18623A6E23DA08F1005C0113 /* CityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		184B7C2F23D1054B00533BCA /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		184B7C3123D7669400533BCA /* Inputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inputs.swift; sourceTree = "<group>"; };
 		184B7C3723D76EE100533BCA /* RecosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecosViewController.swift; sourceTree = "<group>"; };
+		18623A6C23D9F428005C0113 /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
+		18623A6E23DA08F1005C0113 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,8 @@
 				184B7C2B23D0FBF200533BCA /* Places.swift */,
 				184B7C3123D7669400533BCA /* Inputs.swift */,
 				184B7C3723D76EE100533BCA /* RecosViewController.swift */,
+				18623A6C23D9F428005C0113 /* CountriesViewController.swift */,
+				18623A6E23DA08F1005C0113 /* CityViewController.swift */,
 			);
 			path = itineshary;
 			sourceTree = "<group>";
@@ -279,10 +285,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				184B7C3023D1054B00533BCA /* PlacesViewController.swift in Sources */,
+				18623A6F23DA08F1005C0113 /* CityViewController.swift in Sources */,
 				184B7C2E23D0FCF900533BCA /* Constants.swift in Sources */,
 				184B7C0023D0FBA600533BCA /* ViewController.swift in Sources */,
 				184B7BFC23D0FBA600533BCA /* AppDelegate.swift in Sources */,
 				184B7BFE23D0FBA600533BCA /* SceneDelegate.swift in Sources */,
+				18623A6D23D9F428005C0113 /* CountriesViewController.swift in Sources */,
 				184B7C2C23D0FBF200533BCA /* Places.swift in Sources */,
 				184B7C3223D7669400533BCA /* Inputs.swift in Sources */,
 				184B7C3823D76EE100533BCA /* RecosViewController.swift in Sources */,

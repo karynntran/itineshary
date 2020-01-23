@@ -12,7 +12,6 @@ struct AllInputs {
     var inputsList: [UserInputs]
 }
 
-
 struct UserInputs {
     var country: String
     var city: String
@@ -48,6 +47,10 @@ struct UserInputs {
 
         
     }
+}
+
+func createNewInput() {
+    userInputs = UserInputs()
 }
 
 //global variables

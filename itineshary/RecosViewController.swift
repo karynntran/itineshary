@@ -9,6 +9,10 @@
 import UIKit
 
 class RecosViewController: UIViewController {
+    
+    var currentCountry: Country!
+    var currentCity: String = ""
+
 
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
@@ -17,15 +21,19 @@ class RecosViewController: UIViewController {
     
     let buttons: [String] = ["activity", "breakfast", "lunch", "dinner", "drinks", "dessert", "kids", "adults"]
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        countryLabel.text = currentCountry.country
+        cityLabel.text = currentCity
+    }
+    
     @IBAction func buttonTapped(sender: UIButton)
     {
-        let tag = sender.tag
-        let selected = buttons[tag]
         
         sender.isSelected = sender.isSelected ?  false : true
-        
         var backgroundColor = sender.isSelected ? UIColor.yellow : UIColor.black
-        
         sender.backgroundColor = backgroundColor
     }
     
@@ -43,19 +51,28 @@ class RecosViewController: UIViewController {
             }
         }
         
-        userInputs.updateUserInput(country: nil, city: nil, reco: reco, notes: notes, filters: filters)
+        userInputs.updateUserInput(
+            country: currentCountry.country,
+            city: currentCity,
+            reco: reco,
+            notes: notes,
+            filters: filters
+        )
+                
+        allInputs.inputsList.append(userInputs)
         
-        print(userInputs)
-        
-//        allInputs.inputsList.append()
+        createNewInput()
+        print(allInputs)
+
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        countryLabel.text = userInputs.country
-        cityLabel.text = userInputs.city
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is CountriesViewController
+        {
+            var cv = segue.destination as? CountriesViewController
+            cv?.currentCountry = currentCountry.country
+        }
     }
     
 }

@@ -28,9 +28,11 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
                 
+        createNewInput()
+        
         AddRecosBtn.isEnabled = false
         
         self.CountryPicker.delegate = self
@@ -207,6 +209,16 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         } else {
             self.selectedCity = self.citiesList[row].name
             AddRecosBtn.isEnabled = true
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is RecosViewController
+        {
+            let rv = segue.destination as? RecosViewController
+            rv?.currentCountry = self.selectedCountry
+            rv?.currentCity = self.selectedCity
         }
     }
 }

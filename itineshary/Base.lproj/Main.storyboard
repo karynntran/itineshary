@@ -286,6 +286,14 @@
                                     <action selector="SubmitRecos:" destination="pil-XS-0BE" eventType="touchUpInside" id="GgA-UY-7Ts"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFs-nS-WMJ">
+                                <rect key="frame" x="17" y="644" width="167" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="See all recos for country"/>
+                                <connections>
+                                    <segue destination="Cub-N2-PIe" kind="show" id="MeA-zR-cWZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="YNA-ee-cSY"/>
@@ -305,22 +313,25 @@
             </objects>
             <point key="canvasLocation" x="2457.971014492754" y="95.758928571428569"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Country-->
         <scene sceneID="OdD-P2-Brx">
             <objects>
-                <tableViewController id="Cub-N2-PIe" sceneMemberID="viewController">
+                <tableViewController id="Cub-N2-PIe" customClass="CountriesViewController" customModule="itineshary" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lQf-G8-DRd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Z00-Z1-t9a">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CountryCell" id="n1Y-kp-P18">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z00-Z1-t9a" id="sAH-BZ-yjZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n1Y-kp-P18" id="G4F-aH-8ih">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="DE6-xN-YTj" kind="show" identifier="CitySegue" id="f3h-aD-ESE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -328,10 +339,33 @@
                             <outlet property="delegate" destination="Cub-N2-PIe" id="o99-Gn-waW"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Country" id="cwC-lH-8FP"/>
+                    <connections>
+                        <outlet property="CountryListTitle" destination="cwC-lH-8FP" id="5pp-fc-JtP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgp-2g-qPX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3283" y="100"/>
+            <point key="canvasLocation" x="3282.608695652174" y="99.776785714285708"/>
+        </scene>
+        <!--City-->
+        <scene sceneID="xtz-E9-nBt">
+            <objects>
+                <viewController id="DE6-xN-YTj" customClass="CityViewController" customModule="itineshary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sdE-X8-CHv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2Ij-h7-jxM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="City" id="1xm-Ri-0lf"/>
+                    <connections>
+                        <outlet property="CityViewTitle" destination="1xm-Ri-0lf" id="aIe-7t-FS1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fA7-jf-0L1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3970" y="100"/>
         </scene>
     </scenes>
 </document>
