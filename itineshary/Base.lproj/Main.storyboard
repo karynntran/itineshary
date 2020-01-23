@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -330,7 +331,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="DE6-xN-YTj" kind="show" identifier="CitySegue" id="f3h-aD-ESE"/>
+                                    <segue destination="Ric-uh-UM2" kind="show" id="dmD-fF-09w"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -349,23 +350,57 @@
             <point key="canvasLocation" x="3282.608695652174" y="99.776785714285708"/>
         </scene>
         <!--City-->
-        <scene sceneID="xtz-E9-nBt">
+        <scene sceneID="of1-8V-bQk">
             <objects>
-                <viewController id="DE6-xN-YTj" customClass="CityViewController" customModule="itineshary" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sdE-X8-CHv">
+                <collectionViewController id="Ric-uh-UM2" customClass="CityViewController" customModule="itineshary" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ZMR-bV-itM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="2Ij-h7-jxM"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="City" id="1xm-Ri-0lf"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f6U-6G-0tQ">
+                            <size key="itemSize" width="360" height="151"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCell" id="E2T-4d-pg4" customClass="CityCell" customModule="itineshary" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="151"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XKg-7t-jsj">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="151"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFk-Cv-vDi">
+                                            <rect key="frame" x="25" y="34" width="279" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="200" height="151"/>
+                                <connections>
+                                    <outlet property="myLabel" destination="dFk-Cv-vDi" id="vT7-8w-LjO"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Ric-uh-UM2" id="8us-IR-Sph"/>
+                            <outlet property="delegate" destination="Ric-uh-UM2" id="T8X-yy-8l7"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="City" id="ksJ-Od-zpS"/>
                     <connections>
-                        <outlet property="CityViewTitle" destination="1xm-Ri-0lf" id="aIe-7t-FS1"/>
+                        <outlet property="CityViewTitle" destination="ksJ-Od-zpS" id="JoY-Bn-z0g"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fA7-jf-0L1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B1i-rx-5Df" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3970" y="100"/>
+            <point key="canvasLocation" x="3957.971014492754" y="99.776785714285708"/>
         </scene>
     </scenes>
 </document>

@@ -8,7 +8,10 @@
 
 import UIKit
 
-class CityViewController: UIViewController {
+class CityViewController: UICollectionViewController {
+    
+        
+    
     
     @IBOutlet weak var CityViewTitle: UINavigationItem!
     var currentCity: String = ""
@@ -17,6 +20,7 @@ class CityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         CityViewTitle.title = "Recommendations for \(currentCity)"
         
         loadCities()
@@ -33,4 +37,26 @@ class CityViewController: UIViewController {
         
         print(cityRecoList)
     }
+    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(cityRecoList)
+        return cityRecoList.count
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        // get a reference to our storyboard cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CityCell", for: indexPath as IndexPath) as! CityCell
+
+        // Use the outlet in our custom class to get a reference to the UILabel in the cell
+        cell.myLabel.text = cityRecoList[indexPath.row].city
+
+        return cell
+    }
+
+    
 }
