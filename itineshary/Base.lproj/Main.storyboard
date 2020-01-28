@@ -29,7 +29,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Build Now!"/>
                                 <connections>
-                                    <segue destination="M5b-GF-Ojt" kind="show" id="H1P-Og-PCk"/>
+                                    <segue destination="G8O-au-Z1e" kind="show" id="H1P-Og-PCk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -71,17 +71,6 @@
                                 <rect key="frame" x="47" y="507" width="320" height="216"/>
                                 <accessibility key="accessibilityConfiguration" identifier="cityPickerView"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOz-ks-uLL">
-                                <rect key="frame" x="320" y="751" width="74" height="30"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <bool key="isElement" value="NO"/>
-                                </accessibility>
-                                <state key="normal" title="Add Recos"/>
-                                <connections>
-                                    <action selector="AddRecosBtnClick:" destination="M5b-GF-Ojt" eventType="touchUpInside" id="REv-uK-6TR"/>
-                                    <segue destination="pil-XS-0BE" kind="show" id="5hZ-Ep-MwX"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -90,25 +79,24 @@
                             <constraint firstItem="eip-Kz-pdz" firstAttribute="top" secondItem="Gx0-hL-ZCj" secondAttribute="bottom" constant="50" id="CEe-2c-7dI"/>
                             <constraint firstItem="Gx0-hL-ZCj" firstAttribute="centerX" secondItem="NRr-PK-Vph" secondAttribute="centerX" id="DRQ-lA-dra"/>
                             <constraint firstItem="dTK-qT-F8v" firstAttribute="leading" secondItem="NRr-PK-Vph" secondAttribute="leadingMargin" id="GKU-Mh-Eef"/>
-                            <constraint firstItem="NOz-ks-uLL" firstAttribute="top" secondItem="Zd3-SQ-M3E" secondAttribute="bottom" constant="28" id="Ruv-Hx-9Fc"/>
                             <constraint firstItem="Gx0-hL-ZCj" firstAttribute="centerX" secondItem="Zd3-SQ-M3E" secondAttribute="centerX" id="W5H-zh-vTz"/>
                             <constraint firstItem="Gx0-hL-ZCj" firstAttribute="top" secondItem="dTK-qT-F8v" secondAttribute="bottom" constant="8" id="bzM-2M-R7I"/>
                             <constraint firstItem="dTK-qT-F8v" firstAttribute="top" secondItem="cTg-U5-ysJ" secondAttribute="top" constant="86" id="fF8-bw-zHu"/>
-                            <constraint firstItem="NOz-ks-uLL" firstAttribute="trailing" secondItem="NRr-PK-Vph" secondAttribute="trailingMargin" id="rgL-hb-EP8"/>
                             <constraint firstItem="Zd3-SQ-M3E" firstAttribute="top" secondItem="eip-Kz-pdz" secondAttribute="bottom" constant="17" id="v94-jH-REm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cTg-U5-ysJ"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Places" id="iU3-fX-42j"/>
                     <navigationItem key="navigationItem" id="biN-ui-11y"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="AddRecosBtn" destination="NOz-ks-uLL" id="GwU-8g-jCQ"/>
                         <outlet property="CityPicker" destination="Zd3-SQ-M3E" id="geo-66-5BB"/>
                         <outlet property="CountryPicker" destination="Gx0-hL-ZCj" id="A3i-Bh-FpU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSt-Gw-k3Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1743" y="96"/>
+            <point key="canvasLocation" x="2652.1739130434785" y="95.758928571428569"/>
         </scene>
         <!--Itineshary-->
         <scene sceneID="IGa-tA-8gt">
@@ -128,10 +116,12 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
         </scene>
-        <!--Recos View Controller-->
+        <!--RecosViewController-->
         <scene sceneID="M6j-8B-izs">
             <objects>
-                <viewController id="pil-XS-0BE" customClass="RecosViewController" customModule="itineshary" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yzf-6H-HvJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="8sY-8t-6aB" userLabel="Exit" sceneMemberID="exit"/>
+                <viewController title="RecosViewController" id="pil-XS-0BE" customClass="RecosViewController" customModule="itineshary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iXb-Dm-cDY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,17 +278,18 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFs-nS-WMJ">
-                                <rect key="frame" x="17" y="644" width="167" height="30"/>
+                                <rect key="frame" x="17" y="644" width="168" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="See all recos for country"/>
+                                <state key="normal" title="See all recos for this city"/>
                                 <connections>
-                                    <segue destination="Cub-N2-PIe" kind="show" id="MeA-zR-cWZ"/>
+                                    <segue destination="Ric-uh-UM2" kind="show" id="RdP-ta-TVW"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="YNA-ee-cSY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Add Reco" id="CzS-gC-5OD"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="d5z-xW-GBa"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -309,10 +300,8 @@
                         <outlet property="recoText" destination="W0i-tF-GXv" id="k5z-Px-7eJ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yzf-6H-HvJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="8sY-8t-6aB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2457.971014492754" y="95.758928571428569"/>
+            <point key="canvasLocation" x="3368.115942028986" y="95.758928571428569"/>
         </scene>
         <!--Country-->
         <scene sceneID="OdD-P2-Brx">
@@ -322,9 +311,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tx1-8K-JYj">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <attributedString key="attributedText">
+                                <fragment content="All Recommendations">
+                                    <attributes>
+                                        <font key="NSFont" metaFont="system" size="17"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CountryCell" id="n1Y-kp-P18">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n1Y-kp-P18" id="G4F-aH-8ih">
                                     <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
@@ -340,14 +342,16 @@
                             <outlet property="delegate" destination="Cub-N2-PIe" id="o99-Gn-waW"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="See Recos" id="kFr-BJ-fiu"/>
                     <navigationItem key="navigationItem" title="Country" id="cwC-lH-8FP"/>
                     <connections>
                         <outlet property="CountryListTitle" destination="cwC-lH-8FP" id="5pp-fc-JtP"/>
+                        <outlet property="RecommendationsTitle" destination="Tx1-8K-JYj" id="ACM-cn-Ip0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgp-2g-qPX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3282.608695652174" y="99.776785714285708"/>
+            <point key="canvasLocation" x="4192.753623188406" y="99.776785714285708"/>
         </scene>
         <!--City-->
         <scene sceneID="of1-8V-bQk">
@@ -357,50 +361,110 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f6U-6G-0tQ">
-                            <size key="itemSize" width="360" height="151"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f6U-6G-0tQ">
+                            <size key="itemSize" width="200" height="300"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCell" id="E2T-4d-pg4" customClass="CityCell" customModule="itineshary" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="151"/>
+                                <rect key="frame" x="57" y="50" width="300" height="230"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XKg-7t-jsj">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="151"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="y1P-h6-4Wb">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="230"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFk-Cv-vDi">
-                                            <rect key="frame" x="25" y="34" width="279" height="26"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RecoText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdc-Zc-Vfc">
+                                            <rect key="frame" x="19" y="30" width="273" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NotesText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JL3-1N-k53">
+                                            <rect key="frame" x="19" y="72" width="281" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FilterText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9s-JA-jlX">
+                                            <rect key="frame" x="19" y="168" width="281" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="tintColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="200" height="151"/>
+                                <size key="customSize" width="300" height="230"/>
                                 <connections>
-                                    <outlet property="myLabel" destination="dFk-Cv-vDi" id="vT7-8w-LjO"/>
+                                    <outlet property="filtersText" destination="y9s-JA-jlX" id="kaf-Of-XVD"/>
+                                    <outlet property="notesText" destination="JL3-1N-k53" id="4md-0F-kGI"/>
+                                    <outlet property="recoText" destination="qdc-Zc-Vfc" id="e0L-SU-wpC"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="HeaderCell" id="kA1-RN-umr" customClass="HeaderCell" customModule="itineshary" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City Recommendations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAr-Qp-ler">
+                                    <rect key="frame" x="26" y="15" width="355" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="CityHeader" label="City Recommendations"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <connections>
+                                <outlet property="header" destination="UAr-Qp-ler" id="1v5-IY-c7m"/>
+                            </connections>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="Ric-uh-UM2" id="8us-IR-Sph"/>
                             <outlet property="delegate" destination="Ric-uh-UM2" id="T8X-yy-8l7"/>
                         </connections>
                     </collectionView>
+                    <tabBarItem key="tabBarItem" title="See Recos" id="fsu-nS-kDL"/>
                     <navigationItem key="navigationItem" title="City" id="ksJ-Od-zpS"/>
                     <connections>
+                        <outlet property="CVTest" destination="ZMR-bV-itM" id="NAd-k4-wqi"/>
                         <outlet property="CityViewTitle" destination="ksJ-Od-zpS" id="JoY-Bn-z0g"/>
+                        <outlet property="collectView" destination="ZMR-bV-itM" id="b9i-Gh-prB"/>
+                        <outlet property="collectionView" destination="ZMR-bV-itM" id="mGS-hA-irE"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B1i-rx-5Df" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3957.971014492754" y="99.776785714285708"/>
+            <point key="canvasLocation" x="4868.115942028986" y="99.776785714285708"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="eja-EN-uH7">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="G8O-au-Z1e" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="aYE-13-AvA"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="922-DP-DJt">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="M5b-GF-Ojt" kind="relationship" relationship="viewControllers" id="d0k-V3-xzp"/>
+                        <segue destination="pil-XS-0BE" kind="relationship" relationship="viewControllers" id="jbe-Ps-qhz"/>
+                        <segue destination="Cub-N2-PIe" kind="relationship" relationship="viewControllers" id="qCb-k0-eZ9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mXd-3k-DcR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tabBarItem title="Add Recos" id="SnL-qD-Ed7"/>
+            </objects>
+            <point key="canvasLocation" x="1742.0289855072465" y="95.758928571428569"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="RdP-ta-TVW"/>
+    </inferredMetricsTieBreakers>
 </document>

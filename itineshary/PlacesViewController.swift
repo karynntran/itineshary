@@ -11,9 +11,7 @@ import Foundation
 import UIKit
 
 class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-    
-    @IBOutlet weak var AddRecosBtn: UIButton!
-    
+        
     @IBOutlet weak var CountryPicker: UIPickerView!
     var countriesList: [Country] = []
     var selectedCountry: Country!
@@ -23,17 +21,20 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     var selectedCity: String = ""
 
     
-    @IBAction func AddRecosBtnClick(_ sender: Any) {
-        userInputs.updateUserInput(country: self.selectedCountry.country, city: self.selectedCity)
-    }
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-                
-        createNewInput()
         
-        AddRecosBtn.isEnabled = false
+        self.tabBarController?.tabBar.isHidden = true
+
+        createNewInput()
+
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+                
+
+        
         
         self.CountryPicker.delegate = self
         self.CountryPicker.dataSource = self
@@ -185,15 +186,16 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == CountryPicker {
-            AddRecosBtn.isEnabled = false
-            var sorted = self.countriesList.sorted(by: { $0.country < $1.country })
+            let sorted = self.countriesList.sorted(by: { $0.country < $1.country })
             self.countriesList = sorted
             return self.countriesList[row].country
         } else {
             var sorted = self.citiesList.sorted(by: { $0.name < $1.name })
             self.citiesList = sorted
             if self.citiesList[0].name == "No cities listed." {
-                AddRecosBtn.isEnabled = true
+                currentState.country = self.selectedCountry.country
+                currentState.city = self.selectedCity
+                self.tabBarController?.tabBar.isHidden = false
             }
             return self.citiesList[row].name
         }
@@ -208,17 +210,25 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             getCities(country: self.selectedCountry)
         } else {
             self.selectedCity = self.citiesList[row].name
-            AddRecosBtn.isEnabled = true
+            currentState.country = self.selectedCountry.country
+            currentState.city = self.selectedCity
+            self.tabBarController?.tabBar.isHidden = false
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if segue.destination is RecosViewController
-        {
-            let rv = segue.destination as? RecosViewController
-            rv?.currentCountry = self.selectedCountry
-            rv?.currentCity = self.selectedCity
-        }
-    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+//    {
+//        print("HO THERE")
+//
+//        if segue.destination is RecosViewController
+//        {
+//            userInputs.updateUserInput(country: self.selectedCountry.country, city: self.selectedCity)
+//
+//            let rv = segue.destination as? RecosViewController
+//            print(":HEY THERE")
+//            rv?.currentCountry = self.selectedCountry
+//            rv?.currentCity = self.selectedCity
+//        }
+//    }
 }

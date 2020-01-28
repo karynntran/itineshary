@@ -10,7 +10,7 @@ import UIKit
 
 class RecosViewController: UIViewController {
     
-    var currentCountry: Country!
+    var currentCountry: String = ""
     var currentCity: String = ""
 
 
@@ -25,7 +25,10 @@ class RecosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        countryLabel.text = currentCountry.country
+        currentCountry = currentState.country
+        currentCity = currentState.city
+            
+        countryLabel.text = currentCountry
         cityLabel.text = currentCity
     }
     
@@ -52,26 +55,27 @@ class RecosViewController: UIViewController {
         }
         
         userInputs.updateUserInput(
-            country: currentCountry.country,
+            country: currentCountry,
             city: currentCity,
+            fullDestination: "\(currentCountry)-\(currentCity)",
             reco: reco,
             notes: notes,
             filters: filters
         )
+        
                 
         allInputs.inputsList.append(userInputs)
         
         createNewInput()
-        print(allInputs)
 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.destination is CountriesViewController
+        if segue.destination is CityViewController
         {
-            var cv = segue.destination as? CountriesViewController
-            cv?.currentCountry = currentCountry.country
+            var cv = segue.destination as? CityViewController
+            cv?.currentCity = currentCity
         }
     }
     

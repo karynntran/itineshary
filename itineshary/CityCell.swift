@@ -9,7 +9,13 @@
 import UIKit
 
 
+
 class CityCell: UICollectionViewCell {
 
-    @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var notesText: UILabel!
+    
+    @IBOutlet weak var recoText: UILabel!
+
+    @IBOutlet weak var filtersText: UILabel!
+        
 }

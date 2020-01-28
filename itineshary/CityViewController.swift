@@ -8,22 +8,24 @@
 
 import UIKit
 
-class CityViewController: UICollectionViewController {
-    
+class CityViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
         
-    
+    @IBOutlet var collectView: UICollectionView!
     
     @IBOutlet weak var CityViewTitle: UINavigationItem!
     var currentCity: String = ""
     
     var cityRecoList: [UserInputs] = []
     
-    override func viewDidLoad() {
+    @IBOutlet var CVTest: UICollectionView!
+    
+    override func viewDidLoad(){
         super.viewDidLoad()
-        
-        CityViewTitle.title = "Recommendations for \(currentCity)"
+
+        currentCity = currentState.city
         
         loadCities()
+        
     }
     
     func loadCities() {
@@ -35,7 +37,6 @@ class CityViewController: UICollectionViewController {
             }
         }
         
-        print(cityRecoList)
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -43,20 +44,35 @@ class CityViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(cityRecoList)
         return cityRecoList.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         // get a reference to our storyboard cell
+
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CityCell", for: indexPath as IndexPath) as! CityCell
 
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        cell.myLabel.text = cityRecoList[indexPath.row].city
+        
+        cell.recoText.text = cityRecoList[indexPath.row].reco
+        
+        cell.notesText.text = cityRecoList[indexPath.row].notes
+        
+        cell.filtersText.text = cityRecoList[indexPath.row].filters.joined(separator: ",")
 
         return cell
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let width = view.frame.size.width
+        let height = view.frame.size.height / 4
+               
+        
+        return CGSize(width: width, height: height)
+    }
+    
     
 }

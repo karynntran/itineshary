@@ -23,6 +23,7 @@
 		18623A6D23D9F428005C0113 /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18623A6C23D9F428005C0113 /* CountriesViewController.swift */; };
 		18623A6F23DA08F1005C0113 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18623A6E23DA08F1005C0113 /* CityViewController.swift */; };
 		18623A7123DA4042005C0113 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18623A7023DA4042005C0113 /* CityCell.swift */; };
+		1879602023DF5913003FBC9A /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879601F23DF5913003FBC9A /* TabController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		18623A6C23D9F428005C0113 /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
 		18623A6E23DA08F1005C0113 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		18623A7023DA4042005C0113 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		1879601F23DF5913003FBC9A /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				18623A6C23D9F428005C0113 /* CountriesViewController.swift */,
 				18623A6E23DA08F1005C0113 /* CityViewController.swift */,
 				18623A7023DA4042005C0113 /* CityCell.swift */,
+				1879601F23DF5913003FBC9A /* TabController.swift */,
 			);
 			path = itineshary;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				184B7C3023D1054B00533BCA /* PlacesViewController.swift in Sources */,
+				1879602023DF5913003FBC9A /* TabController.swift in Sources */,
 				18623A6F23DA08F1005C0113 /* CityViewController.swift in Sources */,
 				184B7C2E23D0FCF900533BCA /* Constants.swift in Sources */,
 				18623A7123DA4042005C0113 /* CityCell.swift in Sources */,
