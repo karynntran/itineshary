@@ -16,18 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Itineshary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xlj-yw-OIn">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nrB-s3-Ais">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ITINESHARY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xlj-yw-OIn">
                                 <rect key="frame" x="90" y="300" width="235" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6F-Qi-8p6">
-                                <rect key="frame" x="149" y="367" width="121" height="44"/>
+                                <rect key="frame" x="77" y="367" width="266" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Build Now!"/>
+                                <state key="normal" title="Build your itinerary now.">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="1J7-wk-WKF" kind="show" id="5QT-6r-yUp"/>
                                 </connections>
@@ -38,6 +46,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="LrM-z5-yZg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="nrB-s3-Ais" id="h9Y-w6-n7h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,6 +62,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Jd-Wu-fai">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                             <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gx0-hL-ZCj">
                                 <rect key="frame" x="0.0" y="135" width="414" height="326"/>
                                 <accessibility key="accessibilityConfiguration" identifier="countryPickerView"/>
@@ -92,6 +108,7 @@
                     <connections>
                         <outlet property="CityPicker" destination="Zd3-SQ-M3E" id="geo-66-5BB"/>
                         <outlet property="CountryPicker" destination="Gx0-hL-ZCj" id="A3i-Bh-FpU"/>
+                        <outlet property="backgroundView" destination="2Jd-Wu-fai" id="Vhi-AE-zZO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSt-Gw-k3Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -124,6 +141,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uip-21-FRA">
+                                <rect key="frame" x="0.0" y="88" width="414" height="676"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Si-u0-HTO">
                                 <rect key="frame" x="20" y="152" width="374" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -294,6 +316,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="backgroundView" destination="Uip-21-FRA" id="zx7-mO-49R"/>
                         <outlet property="cityLabel" destination="gNi-mA-nD2" id="r5O-Ah-ypf"/>
                         <outlet property="countryLabel" destination="4Si-u0-HTO" id="A7c-El-Vbg"/>
                         <outlet property="notesText" destination="YAS-VW-hUr" id="tt1-pf-a7g"/>
@@ -372,6 +395,11 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <view key="backgroundView" contentMode="scaleToFill" id="ag5-QN-Lsf">
+                            <rect key="frame" x="0.0" y="-88" width="414" height="896"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCell" id="E2T-4d-pg4" customClass="CityCell" customModule="itineshary" customModuleProvider="target">
                                 <rect key="frame" x="57" y="50" width="300" height="230"/>
@@ -439,6 +467,7 @@
                     <connections>
                         <outlet property="CVTest" destination="ZMR-bV-itM" id="NAd-k4-wqi"/>
                         <outlet property="CityViewTitle" destination="ksJ-Od-zpS" id="JoY-Bn-z0g"/>
+                        <outlet property="backgroundView" destination="ag5-QN-Lsf" id="GSW-Kx-5AK"/>
                         <outlet property="collectView" destination="ZMR-bV-itM" id="b9i-Gh-prB"/>
                         <outlet property="collectionView" destination="ZMR-bV-itM" id="mGS-hA-irE"/>
                     </connections>
@@ -447,12 +476,12 @@
             </objects>
             <point key="canvasLocation" x="5778.2608695652179" y="99.776785714285708"/>
         </scene>
-        <!--Tab Controller-->
+        <!--Itineshary-->
         <scene sceneID="Pyg-8w-Ti8">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1J7-wk-WKF" customClass="TabController" customModule="itineshary" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="9ae-KR-L04"/>
+                    <navigationItem key="navigationItem" title="Itineshary" id="9ae-KR-L04"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZOV-pt-NBg">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -460,8 +489,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="M5b-GF-Ojt" kind="relationship" relationship="viewControllers" id="BhM-3R-haV"/>
-                        <segue destination="pil-XS-0BE" kind="relationship" relationship="viewControllers" id="Zgg-Ik-ZS2"/>
-                        <segue destination="Cub-N2-PIe" kind="relationship" relationship="viewControllers" id="Bsc-fx-XCW"/>
+                        <segue destination="pil-XS-0BE" kind="relationship" relationship="viewControllers" id="pg5-xn-Mre"/>
+                        <segue destination="Cub-N2-PIe" kind="relationship" relationship="viewControllers" id="l74-De-blc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nGK-Fz-q1Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

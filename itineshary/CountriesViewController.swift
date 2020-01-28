@@ -22,6 +22,7 @@ class CountriesViewController: UITableViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
         currentCountry = currentState.country
         currentCountryList = Array(Set(allInputs.inputsList.map { $0.fullDestination }))

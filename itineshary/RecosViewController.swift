@@ -13,7 +13,8 @@ class RecosViewController: UIViewController {
     var currentCountry: String = ""
     var currentCity: String = ""
 
-
+    @IBOutlet weak var backgroundView: UIView!
+    
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var recoText: UITextField!
@@ -21,6 +22,11 @@ class RecosViewController: UIViewController {
     
     let buttons: [String] = ["activity", "breakfast", "lunch", "dinner", "drinks", "dessert", "kids", "adults"]
     
+    
+    override func viewDidLoad() {
+        let bg = BackgroundGradient()
+        bg.createGradient(view: view, backgroundView: backgroundView)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -31,9 +37,13 @@ class RecosViewController: UIViewController {
             
         countryLabel.text = currentCountry
         cityLabel.text = currentCity
+        
+        self.tabBarController?.tabBar.isHidden = false
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        
         clearInputs()
     }
     
@@ -55,7 +65,10 @@ class RecosViewController: UIViewController {
             if let btn = view as? UIButton {
                 if btn.isSelected {
                     let tag = btn.tag
-                    filters.append(self.buttons[tag])
+                    if !filters.contains(self.buttons[tag]) {
+                        filters.append(self.buttons[tag])
+
+                    }
                 }
             }
         }

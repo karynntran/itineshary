@@ -18,6 +18,8 @@ class CityViewController: UICollectionViewController, UICollectionViewDelegateFl
     
     var cityRecoList: [UserInputs] = []
     
+    @IBOutlet weak var backgroundView: UIView!
+    
     @IBOutlet var CVTest: UICollectionView!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,6 +30,9 @@ class CityViewController: UICollectionViewController, UICollectionViewDelegateFl
     override func viewDidLoad(){
         super.viewDidLoad()
 
+        let bg = BackgroundGradient()
+        bg.createGradient(view: view, backgroundView: backgroundView)
+        
         currentCity = currentState.city
         
         
@@ -66,6 +71,7 @@ class CityViewController: UICollectionViewController, UICollectionViewDelegateFl
         cell.recoText.text = cityRecoList[indexPath.row].reco
         
         cell.notesText.text = cityRecoList[indexPath.row].notes
+        
         
         cell.filtersText.text = cityRecoList[indexPath.row].filters.joined(separator: ",")
 

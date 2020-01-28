@@ -10,11 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var backgroundView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true
-
+        
+        let bg = BackgroundGradient()
+        bg.createGradient(view: view, backgroundView: backgroundView)
+        
     }
-    
+
 }
 

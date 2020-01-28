@@ -12,6 +12,8 @@ import UIKit
 
 class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         
+    @IBOutlet weak var backgroundView: UIView!
+    
     @IBOutlet weak var CountryPicker: UIPickerView!
     var countriesList: [Country] = []
     var selectedCountry: Country!
@@ -27,7 +29,8 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         currentState.country = ""
         currentState.city = ""
         
-        self.tabBarController?.tabBar.isHidden = true
+//        self.tabBarController?.tabBar.isHidden = true
+        self.tabBarController!.tabBar.items![1].isEnabled = false
 
         createNewInput()
 
@@ -35,6 +38,9 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let bg = BackgroundGradient()
+        bg.createGradient(view: view, backgroundView: backgroundView)
         
         self.CountryPicker.delegate = self
         self.CountryPicker.dataSource = self
@@ -96,6 +102,7 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
 
     func getCities(country: Country) -> Void {
+        print(country)
         let headers = [
             "x-rapidapi-host": PLACES_REQUEST["API"]!,
             "x-rapidapi-key": PLACES_REQUEST["KEY"]!,
@@ -194,7 +201,7 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             if self.citiesList[0].name == "No cities listed." {
                 currentState.country = self.selectedCountry.country
                 currentState.city = self.selectedCity
-                self.tabBarController?.tabBar.isHidden = false
+//                self.tabBarController?.tabBar.isHidden = false
             }
             return self.citiesList[row].name
         }
@@ -212,8 +219,11 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             self.selectedCity = self.citiesList[row].name
             currentState.country = self.selectedCountry.country
             currentState.city = self.selectedCity
-            self.tabBarController?.tabBar.isHidden = false
+            self.tabBarController!.tabBar.items![1].isEnabled = true
+
+//            self.tabBarController?.tabBar.isHidden = false
         }
     }
+    
 
 }
