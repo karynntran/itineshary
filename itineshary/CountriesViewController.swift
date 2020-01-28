@@ -14,6 +14,8 @@ class CountriesViewController: UITableViewController {
     
     @IBOutlet weak var RecommendationsTitle: UILabel!
     
+    @IBOutlet weak var CountryBackBtn: UINavigationItem!
+    
     var currentCountry: String = ""
     var count: Int = 0
     var currentCountryList: [String] = []

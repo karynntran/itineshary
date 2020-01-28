@@ -24,6 +24,9 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        currentState.country = ""
+        currentState.city = ""
+        
         self.tabBarController?.tabBar.isHidden = true
 
         createNewInput()
@@ -32,9 +35,6 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-
-        
         
         self.CountryPicker.delegate = self
         self.CountryPicker.dataSource = self
@@ -96,7 +96,6 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
 
     func getCities(country: Country) -> Void {
-        print(country)
         let headers = [
             "x-rapidapi-host": PLACES_REQUEST["API"]!,
             "x-rapidapi-key": PLACES_REQUEST["KEY"]!,
@@ -208,6 +207,7 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         if pickerView == CountryPicker {
             self.selectedCountry = self.countriesList[row]
             getCities(country: self.selectedCountry)
+            currentState.country = self.selectedCountry.country
         } else {
             self.selectedCity = self.citiesList[row].name
             currentState.country = self.selectedCountry.country
@@ -215,20 +215,5 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             self.tabBarController?.tabBar.isHidden = false
         }
     }
-    
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-//    {
-//        print("HO THERE")
-//
-//        if segue.destination is RecosViewController
-//        {
-//            userInputs.updateUserInput(country: self.selectedCountry.country, city: self.selectedCity)
-//
-//            let rv = segue.destination as? RecosViewController
-//            print(":HEY THERE")
-//            rv?.currentCountry = self.selectedCountry
-//            rv?.currentCity = self.selectedCity
-//        }
-//    }
+
 }

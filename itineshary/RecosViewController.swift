@@ -22,8 +22,9 @@ class RecosViewController: UIViewController {
     let buttons: [String] = ["activity", "breakfast", "lunch", "dinner", "drinks", "dessert", "kids", "adults"]
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(true)
         
         currentCountry = currentState.country
         currentCity = currentState.city
@@ -31,6 +32,11 @@ class RecosViewController: UIViewController {
         countryLabel.text = currentCountry
         cityLabel.text = currentCity
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        clearInputs()
+    }
+    
     
     @IBAction func buttonTapped(sender: UIButton)
     {
@@ -57,17 +63,22 @@ class RecosViewController: UIViewController {
         userInputs.updateUserInput(
             country: currentCountry,
             city: currentCity,
-            fullDestination: "\(currentCountry)-\(currentCity)",
+            fullDestination: "\(currentCountry) - \(currentCity)",
             reco: reco,
             notes: notes,
             filters: filters
         )
         
+        currentState.city = currentCity
+        currentState.country = currentCountry
                 
         allInputs.inputsList.append(userInputs)
         
+        clearInputs()
+
         createNewInput()
 
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -76,6 +87,20 @@ class RecosViewController: UIViewController {
         {
             var cv = segue.destination as? CityViewController
             cv?.currentCity = currentCity
+        }
+    }
+    
+    func clearInputs(){
+        recoText.text = ""
+        notesText.text = ""
+        
+        for view in self.view.subviews as [UIView] {
+            if let btn = view as? UIButton {
+                if btn.isSelected {
+                    btn.isSelected = false
+                    btn.backgroundColor = UIColor.black
+                }
+            }
         }
     }
     

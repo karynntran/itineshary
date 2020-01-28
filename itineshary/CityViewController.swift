@@ -13,16 +13,23 @@ class CityViewController: UICollectionViewController, UICollectionViewDelegateFl
     @IBOutlet var collectView: UICollectionView!
     
     @IBOutlet weak var CityViewTitle: UINavigationItem!
+    
     var currentCity: String = ""
     
     var cityRecoList: [UserInputs] = []
     
     @IBOutlet var CVTest: UICollectionView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        CityViewTitle.title = "Recos for \(currentCity)"
+    }
+    
     override func viewDidLoad(){
         super.viewDidLoad()
 
         currentCity = currentState.city
+        
         
         loadCities()
         

@@ -29,7 +29,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Build Now!"/>
                                 <connections>
-                                    <segue destination="G8O-au-Z1e" kind="show" id="H1P-Og-PCk"/>
+                                    <segue destination="1J7-wk-WKF" kind="show" id="5QT-6r-yUp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -51,24 +51,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gx0-hL-ZCj">
-                                <rect key="frame" x="0.0" y="203" width="414" height="216"/>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gx0-hL-ZCj">
+                                <rect key="frame" x="0.0" y="135" width="414" height="326"/>
                                 <accessibility key="accessibilityConfiguration" identifier="countryPickerView"/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTK-qT-F8v">
-                                <rect key="frame" x="20" y="174" width="114" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTK-qT-F8v">
+                                <rect key="frame" x="20" y="135" width="114" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eip-Kz-pdz">
-                                <rect key="frame" x="20" y="469" width="83" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eip-Kz-pdz">
+                                <rect key="frame" x="20" y="505" width="83" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zd3-SQ-M3E">
-                                <rect key="frame" x="47" y="507" width="320" height="216"/>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zd3-SQ-M3E">
+                                <rect key="frame" x="47" y="469" width="320" height="344"/>
                                 <accessibility key="accessibilityConfiguration" identifier="cityPickerView"/>
                             </pickerView>
                         </subviews>
@@ -87,7 +87,7 @@
                         <viewLayoutGuide key="safeArea" id="cTg-U5-ysJ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Places" id="iU3-fX-42j"/>
-                    <navigationItem key="navigationItem" id="biN-ui-11y"/>
+                    <navigationItem key="navigationItem" title="Places" id="biN-ui-11y"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="CityPicker" destination="Zd3-SQ-M3E" id="geo-66-5BB"/>
@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSt-Gw-k3Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2652.1739130434785" y="95.758928571428569"/>
+            <point key="canvasLocation" x="3562.3188405797105" y="95.758928571428569"/>
         </scene>
         <!--Itineshary-->
         <scene sceneID="IGa-tA-8gt">
@@ -119,8 +119,6 @@
         <!--RecosViewController-->
         <scene sceneID="M6j-8B-izs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yzf-6H-HvJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="8sY-8t-6aB" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController title="RecosViewController" id="pil-XS-0BE" customClass="RecosViewController" customModule="itineshary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iXb-Dm-cDY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -291,7 +289,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Add Reco" id="CzS-gC-5OD"/>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="d5z-xW-GBa"/>
+                    <navigationItem key="navigationItem" title="Recos" id="hWG-8h-HBY">
+                        <barButtonItem key="backBarButtonItem" title="Places" id="to3-pv-JY3"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cityLabel" destination="gNi-mA-nD2" id="r5O-Ah-ypf"/>
@@ -300,8 +300,10 @@
                         <outlet property="recoText" destination="W0i-tF-GXv" id="k5z-Px-7eJ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yzf-6H-HvJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="8sY-8t-6aB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3368.115942028986" y="95.758928571428569"/>
+            <point key="canvasLocation" x="4278.2608695652179" y="95.758928571428569"/>
         </scene>
         <!--Country-->
         <scene sceneID="OdD-P2-Brx">
@@ -343,15 +345,18 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="See Recos" id="kFr-BJ-fiu"/>
-                    <navigationItem key="navigationItem" title="Country" id="cwC-lH-8FP"/>
+                    <navigationItem key="navigationItem" title="Country" id="cwC-lH-8FP">
+                        <barButtonItem key="backBarButtonItem" title="Places" id="OUX-1v-XIn"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="CountryBackBtn" destination="cwC-lH-8FP" id="Woc-NP-i4j"/>
                         <outlet property="CountryListTitle" destination="cwC-lH-8FP" id="5pp-fc-JtP"/>
                         <outlet property="RecommendationsTitle" destination="Tx1-8K-JYj" id="ACM-cn-Ip0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgp-2g-qPX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4192.753623188406" y="99.776785714285708"/>
+            <point key="canvasLocation" x="5102.898550724638" y="99.776785714285708"/>
         </scene>
         <!--City-->
         <scene sceneID="of1-8V-bQk">
@@ -375,22 +380,22 @@
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="230"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RecoText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdc-Zc-Vfc">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RecoText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdc-Zc-Vfc">
                                             <rect key="frame" x="19" y="30" width="273" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NotesText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JL3-1N-k53">
-                                            <rect key="frame" x="19" y="72" width="281" height="34"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NotesText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JL3-1N-k53">
+                                            <rect key="frame" x="19" y="72" width="281" height="88"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FilterText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9s-JA-jlX">
-                                            <rect key="frame" x="19" y="168" width="281" height="34"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FilterText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9s-JA-jlX">
+                                            <rect key="frame" x="19" y="168" width="281" height="62"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -440,31 +445,31 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B1i-rx-5Df" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4868.115942028986" y="99.776785714285708"/>
+            <point key="canvasLocation" x="5778.2608695652179" y="99.776785714285708"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="eja-EN-uH7">
+        <!--Tab Controller-->
+        <scene sceneID="Pyg-8w-Ti8">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="G8O-au-Z1e" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1J7-wk-WKF" customClass="TabController" customModule="itineshary" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="aYE-13-AvA"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="922-DP-DJt">
+                    <navigationItem key="navigationItem" id="9ae-KR-L04"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZOV-pt-NBg">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="M5b-GF-Ojt" kind="relationship" relationship="viewControllers" id="d0k-V3-xzp"/>
-                        <segue destination="pil-XS-0BE" kind="relationship" relationship="viewControllers" id="jbe-Ps-qhz"/>
-                        <segue destination="Cub-N2-PIe" kind="relationship" relationship="viewControllers" id="qCb-k0-eZ9"/>
+                        <segue destination="M5b-GF-Ojt" kind="relationship" relationship="viewControllers" id="BhM-3R-haV"/>
+                        <segue destination="pil-XS-0BE" kind="relationship" relationship="viewControllers" id="Zgg-Ik-ZS2"/>
+                        <segue destination="Cub-N2-PIe" kind="relationship" relationship="viewControllers" id="Bsc-fx-XCW"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mXd-3k-DcR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tabBarItem title="Add Recos" id="SnL-qD-Ed7"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nGK-Fz-q1Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1742.0289855072465" y="95.758928571428569"/>
+            <point key="canvasLocation" x="2652.1739130434785" y="95.758928571428569"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RdP-ta-TVW"/>
+        <segue reference="dmD-fF-09w"/>
     </inferredMetricsTieBreakers>
 </document>
