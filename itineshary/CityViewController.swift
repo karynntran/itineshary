@@ -24,6 +24,9 @@ class CityViewController: UICollectionViewController, UICollectionViewDelegateFl
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
+        loadCities()
+
         CityViewTitle.title = "Recos for \(currentCity)"
     }
     
@@ -32,12 +35,7 @@ class CityViewController: UICollectionViewController, UICollectionViewDelegateFl
 
         let bg = BackgroundGradient()
         bg.createGradient(view: view, backgroundView: backgroundView)
-        
-        currentCity = currentState.city
-        
-        
-        loadCities()
-        
+            
     }
     
     func loadCities() {
@@ -73,8 +71,10 @@ class CityViewController: UICollectionViewController, UICollectionViewDelegateFl
         cell.notesText.text = cityRecoList[indexPath.row].notes
         
         
-        cell.filtersText.text = cityRecoList[indexPath.row].filters.joined(separator: ",")
+        cell.filtersText.text = cityRecoList[indexPath.row].filters.joined(separator: ", ")
 
+        print(cityRecoList[indexPath.row].filters)
+        
         return cell
     }
     

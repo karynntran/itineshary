@@ -20,9 +20,8 @@ class CountriesViewController: UITableViewController {
     var count: Int = 0
     var currentCountryList: [String] = []
         
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         
         currentCountry = currentState.country
         currentCountryList = Array(Set(allInputs.inputsList.map { $0.fullDestination }))
@@ -30,6 +29,11 @@ class CountriesViewController: UITableViewController {
         if currentCountryList.count == 0 {
             currentCountryList.append("No recommendations added")
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
         
         RecommendationsTitle.text = "All Itineraries"
     }
@@ -46,6 +50,7 @@ class CountriesViewController: UITableViewController {
          let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath)
                 
         cell.textLabel?.text = currentCountryList[indexPath.row]
+        print("cell", currentCountryList[indexPath.row])
         if cell.textLabel?.text == "No recommendations added" {
             cell.isUserInteractionEnabled = false
         } else {
@@ -58,8 +63,11 @@ class CountriesViewController: UITableViewController {
     {
         if segue.destination is CityViewController
         {
-            var cityv = segue.destination as? CityViewController
-            cityv?.currentCity = currentCountryList[tableView.indexPathForSelectedRow!.row]
+            let cityv = segue.destination as? CityViewController
+            
+            let truncated = currentCountryList[tableView.indexPathForSelectedRow!.row].components(separatedBy: "- ")[1]
+            
+            cityv?.currentCity = truncated
         }
     }
     

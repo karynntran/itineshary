@@ -15,17 +15,26 @@ class RecosViewController: UIViewController {
 
     @IBOutlet weak var backgroundView: UIView!
     
+    @IBOutlet weak var contentView: UIView!
+    
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var recoText: UITextField!
     @IBOutlet weak var notesText: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
     
     let buttons: [String] = ["activity", "breakfast", "lunch", "dinner", "drinks", "dessert", "kids", "adults"]
     
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         let bg = BackgroundGradient()
         bg.createGradient(view: view, backgroundView: backgroundView)
+        
+        countryLabel.text = currentCountry
+        cityLabel.text = currentCity
+        
+        errorLabel.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,12 +47,12 @@ class RecosViewController: UIViewController {
         countryLabel.text = currentCountry
         cityLabel.text = currentCity
         
-        self.tabBarController?.tabBar.isHidden = false
+//        self.tabBarController?.tabBar.isHidden = false
 
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        
+        super.viewWillDisappear(true)
         clearInputs()
     }
     
@@ -52,7 +61,7 @@ class RecosViewController: UIViewController {
     {
         
         sender.isSelected = sender.isSelected ?  false : true
-        var backgroundColor = sender.isSelected ? UIColor.yellow : UIColor.black
+        let backgroundColor = sender.isSelected ? UIColor.systemYellow : UIColor.lightGray
         sender.backgroundColor = backgroundColor
     }
     
@@ -61,16 +70,22 @@ class RecosViewController: UIViewController {
         let notes: String? = notesText.text
         var filters: [String] = []
         
-        for view in self.view.subviews as [UIView] {
+        
+        for view in self.contentView.subviews as [UIView] {
             if let btn = view as? UIButton {
                 if btn.isSelected {
                     let tag = btn.tag
-                    if !filters.contains(self.buttons[tag]) {
+//                    if !filters.contains(self.buttons[tag]) {
                         filters.append(self.buttons[tag])
 
-                    }
+//                    }
                 }
             }
+        }
+        
+        if reco == "" || notes == "" || filters.count == 0 {
+            errorLabel.isHidden = false
+            return
         }
         
         userInputs.updateUserInput(
@@ -87,6 +102,9 @@ class RecosViewController: UIViewController {
                 
         allInputs.inputsList.append(userInputs)
         
+        errorLabel.isHidden = true
+
+        
         clearInputs()
 
         createNewInput()
@@ -98,7 +116,7 @@ class RecosViewController: UIViewController {
     {
         if segue.destination is CityViewController
         {
-            var cv = segue.destination as? CityViewController
+            let cv = segue.destination as? CityViewController
             cv?.currentCity = currentCity
         }
     }
@@ -107,11 +125,11 @@ class RecosViewController: UIViewController {
         recoText.text = ""
         notesText.text = ""
         
-        for view in self.view.subviews as [UIView] {
+        for view in self.contentView.subviews as [UIView] {
             if let btn = view as? UIButton {
                 if btn.isSelected {
                     btn.isSelected = false
-                    btn.backgroundColor = UIColor.black
+                    btn.backgroundColor = UIColor.lightGray
                 }
             }
         }

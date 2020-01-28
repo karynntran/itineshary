@@ -23,6 +23,9 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     var selectedCity: String = ""
 
     
+    let backgroundColor = UIColor(white: 1, alpha: 0.7)
+
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
@@ -41,6 +44,9 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         
         let bg = BackgroundGradient()
         bg.createGradient(view: view, backgroundView: backgroundView)
+        
+        CountryPicker.setValue(backgroundColor, forKey: "backgroundColor")
+        CityPicker.setValue(backgroundColor, forKey: "backgroundColor")
         
         self.CountryPicker.delegate = self
         self.CountryPicker.dataSource = self
@@ -81,7 +87,7 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
                     if results != nil {
                         var countriesArr: [Country] = []
                         for item in results.countries {
-                            var country: Country = Country(code: item.key, country: item.value)
+//                            let country: Country = Country(code: item.key, country: item.value)
                             countriesArr.append(Country(code: item.key, country: item.value))
                         }
                         
@@ -196,7 +202,7 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             self.countriesList = sorted
             return self.countriesList[row].country
         } else {
-            var sorted = self.citiesList.sorted(by: { $0.name < $1.name })
+            let sorted = self.citiesList.sorted(by: { $0.name < $1.name })
             self.citiesList = sorted
             if self.citiesList[0].name == "No cities listed." {
                 currentState.country = self.selectedCountry.country
