@@ -26,6 +26,10 @@ class RecosViewController: UIViewController {
     let buttons: [String] = ["activity", "breakfast", "lunch", "dinner", "drinks", "dessert", "kids", "adults"]
     
     
+    @IBAction func createInputToDB() {
+        let _ = InputManager.main.create()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let bg = BackgroundGradient()
@@ -100,11 +104,12 @@ class RecosViewController: UIViewController {
         currentState.city = currentCity
         currentState.country = currentCountry
                 
-        allInputs.inputsList.append(userInputs)
+//        allInputs.inputsList.append(userInputs)
+        
+        createInputToDB()
         
         errorLabel.isHidden = true
 
-        
         clearInputs()
 
         createNewInput()

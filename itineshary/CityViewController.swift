@@ -22,8 +22,13 @@ class CityViewController: UICollectionViewController, UICollectionViewDelegateFl
     
     @IBOutlet var CVTest: UICollectionView!
     
+    var dbAllInputs: [UserInputs] = []
+
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
+        dbAllInputs = InputManager.main.getAllInputs()
         
         loadCities()
 
@@ -39,7 +44,7 @@ class CityViewController: UICollectionViewController, UICollectionViewDelegateFl
     }
     
     func loadCities() {
-        let list = allInputs.inputsList
+        let list = dbAllInputs
         
         for item in list {
             if (item.city == currentCity) {
@@ -72,8 +77,6 @@ class CityViewController: UICollectionViewController, UICollectionViewDelegateFl
         
         
         cell.filtersText.text = cityRecoList[indexPath.row].filters.joined(separator: ", ")
-
-        print(cityRecoList[indexPath.row].filters)
         
         return cell
     }

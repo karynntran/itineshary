@@ -36,5 +36,98 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31E86F2D-4F0E-4C36-8B9B-D80F628A2555"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "itineshary/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "31E86F2D-4F0E-4C36-8B9B-D80F628A2555 - c04d50048d518754"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "itineshary.ViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; itineshary.ViewController"
+                  moduleName = "itineshary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karynnelio/workspace/project/itineshary/itineshary/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "31E86F2D-4F0E-4C36-8B9B-D80F628A2555 - e9446e0885eb76eb"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "itineshary.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; itineshary.ViewController"
+                  moduleName = "itineshary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karynnelio/workspace/project/itineshary/itineshary/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "146">
+               </Location>
+               <Location
+                  uuid = "31E86F2D-4F0E-4C36-8B9B-D80F628A2555 - 75ca74018a29dd83"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "itineshary.ViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;itineshary.ViewController&gt;"
+                  moduleName = "itineshary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karynnelio/workspace/project/itineshary/itineshary/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "31E86F2D-4F0E-4C36-8B9B-D80F628A2555 - d4ef8953bafa3778"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "itineshary.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;itineshary.ViewController&gt;"
+                  moduleName = "itineshary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karynnelio/workspace/project/itineshary/itineshary/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "31E86F2D-4F0E-4C36-8B9B-D80F628A2555 - ee87a49feed957c5"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "itineshary.ViewController.__deallocating_deinit"
+                  moduleName = "itineshary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karynnelio/workspace/project/itineshary/itineshary/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

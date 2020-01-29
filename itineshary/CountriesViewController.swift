@@ -19,13 +19,17 @@ class CountriesViewController: UITableViewController {
     var currentCountry: String = ""
     var count: Int = 0
     var currentCountryList: [String] = []
+    
+    var dbAllInputs: [UserInputs] = []
         
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        dbAllInputs = InputManager.main.getAllInputs()
+        
         currentCountry = currentState.country
-        currentCountryList = Array(Set(allInputs.inputsList.map { $0.fullDestination }))
-        print(currentCountryList)
+        currentCountryList = Array(Set(dbAllInputs.map { $0.fullDestination }))
         if currentCountryList.count == 0 {
             currentCountryList.append("No recommendations added")
         }
@@ -50,7 +54,6 @@ class CountriesViewController: UITableViewController {
          let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath)
                 
         cell.textLabel?.text = currentCountryList[indexPath.row]
-        print("cell", currentCountryList[indexPath.row])
         if cell.textLabel?.text == "No recommendations added" {
             cell.isUserInteractionEnabled = false
         } else {

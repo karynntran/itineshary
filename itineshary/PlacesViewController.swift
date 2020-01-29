@@ -108,7 +108,6 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
 
     func getCities(country: Country) -> Void {
-        print(country)
         let headers = [
             "x-rapidapi-host": PLACES_REQUEST["API"]!,
             "x-rapidapi-key": PLACES_REQUEST["KEY"]!,
