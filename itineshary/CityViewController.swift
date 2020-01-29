@@ -10,7 +10,8 @@ import UIKit
 
 class CityViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
         
-    @IBOutlet var collectView: UICollectionView!
+    
+    
     
     @IBOutlet weak var CityViewTitle: UINavigationItem!
     
@@ -19,8 +20,6 @@ class CityViewController: UICollectionViewController, UICollectionViewDelegateFl
     var cityRecoList: [UserInputs] = []
     
     @IBOutlet weak var backgroundView: UIView!
-    
-    @IBOutlet var CVTest: UICollectionView!
     
     var dbAllInputs: [UserInputs] = []
 
@@ -40,7 +39,7 @@ class CityViewController: UICollectionViewController, UICollectionViewDelegateFl
 
         let bg = BackgroundGradient()
         bg.createGradient(view: view, backgroundView: backgroundView)
-            
+        
     }
     
     func loadCities() {
@@ -78,15 +77,18 @@ class CityViewController: UICollectionViewController, UICollectionViewDelegateFl
         
         cell.filtersText.text = cityRecoList[indexPath.row].filters.joined(separator: ", ")
         
+        cell.layer.cornerRadius = 15
+
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let width = view.frame.size.width
-        let height = view.frame.size.height / 4
-               
         
+        let width = view.frame.size.width - 20
+        let height = view.frame.size.height / 4
+            
         return CGSize(width: width, height: height)
     }
     

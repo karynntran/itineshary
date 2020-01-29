@@ -51,7 +51,13 @@ class RecosViewController: UIViewController {
         countryLabel.text = currentCountry
         cityLabel.text = currentCity
         
-//        self.tabBarController?.tabBar.isHidden = false
+        for view in self.contentView.subviews as [UIView] {
+            if let btn = view as? UIButton {
+                if btn.accessibilityIdentifier == "filter" {
+                    btn.layer.cornerRadius = 8
+                }
+            }
+        }
 
     }
     
@@ -65,7 +71,7 @@ class RecosViewController: UIViewController {
     {
         
         sender.isSelected = sender.isSelected ?  false : true
-        let backgroundColor = sender.isSelected ? UIColor.systemYellow : UIColor.lightGray
+        let backgroundColor = sender.isSelected ? UIColor.systemYellow : UIColor.white
         sender.backgroundColor = backgroundColor
     }
     
@@ -79,10 +85,7 @@ class RecosViewController: UIViewController {
             if let btn = view as? UIButton {
                 if btn.isSelected {
                     let tag = btn.tag
-//                    if !filters.contains(self.buttons[tag]) {
-                        filters.append(self.buttons[tag])
-
-//                    }
+                    filters.append(self.buttons[tag])
                 }
             }
         }
@@ -134,7 +137,7 @@ class RecosViewController: UIViewController {
             if let btn = view as? UIButton {
                 if btn.isSelected {
                     btn.isSelected = false
-                    btn.backgroundColor = UIColor.lightGray
+                    btn.backgroundColor = UIColor.white
                 }
             }
         }

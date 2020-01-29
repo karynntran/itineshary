@@ -46,7 +46,9 @@ class PlacesViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         bg.createGradient(view: view, backgroundView: backgroundView)
         
         CountryPicker.setValue(backgroundColor, forKey: "backgroundColor")
+        CountryPicker.layer.cornerRadius = 15
         CityPicker.setValue(backgroundColor, forKey: "backgroundColor")
+        CityPicker.layer.cornerRadius = 15
         
         self.CountryPicker.delegate = self
         self.CountryPicker.dataSource = self

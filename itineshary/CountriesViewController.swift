@@ -10,6 +10,8 @@ import UIKit
 
 class CountriesViewController: UITableViewController {
     
+    
+    
     @IBOutlet weak var CountryListTitle: UINavigationItem!
     
     @IBOutlet weak var RecommendationsTitle: UILabel!
@@ -25,6 +27,7 @@ class CountriesViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+
         
         dbAllInputs = InputManager.main.getAllInputs()
         
@@ -51,7 +54,7 @@ class CountriesViewController: UITableViewController {
      }
 
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath)
                 
         cell.textLabel?.text = currentCountryList[indexPath.row]
         if cell.textLabel?.text == "No recommendations added" {
@@ -59,6 +62,8 @@ class CountriesViewController: UITableViewController {
         } else {
             cell.isUserInteractionEnabled = true
         }
+        cell.textLabel?.textColor = UIColor.white
+        
         return cell
      }
      
