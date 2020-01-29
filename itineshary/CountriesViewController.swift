@@ -57,11 +57,18 @@ class CountriesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath)
                 
         cell.textLabel?.text = currentCountryList[indexPath.row]
-        if cell.textLabel?.text == "No recommendations added" {
+        if cell.textLabel?.text == "No recommendations added yet." {
             cell.isUserInteractionEnabled = false
         } else {
             cell.isUserInteractionEnabled = true
         }
+        
+        if indexPath.row % 2 == 0 {
+            cell.backgroundColor = UIColor(red: 127/255, green: 174/255, blue: 224/255, alpha: 1.0)
+        } else {
+            cell.backgroundColor = UIColor(red: 177/255, green: 200/255, blue: 224/255, alpha: 1.0)
+        }
+        
         cell.textLabel?.textColor = UIColor.white
         
         return cell

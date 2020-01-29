@@ -79,6 +79,11 @@ class CityViewController: UICollectionViewController, UICollectionViewDelegateFl
         
         cell.layer.cornerRadius = 15
 
+        cell.recoText.sizeToFit()
+        cell.notesText.sizeToFit()
+        cell.filtersText.sizeToFit()
+
+
         
         return cell
     }
