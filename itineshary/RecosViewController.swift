@@ -54,7 +54,7 @@ class RecosViewController: UIViewController {
         for view in self.contentView.subviews as [UIView] {
             if let btn = view as? UIButton {
                 if btn.accessibilityIdentifier == "filter" {
-                    btn.layer.cornerRadius = 8
+                    btn.layer.cornerRadius = 15
                 }
             }
         }
