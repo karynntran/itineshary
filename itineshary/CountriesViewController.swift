@@ -11,6 +11,7 @@ import UIKit
 class CountriesViewController: UITableViewController {
     
     
+    @IBOutlet var CountryTableView: UITableView!
     
     @IBOutlet weak var CountryListTitle: UINavigationItem!
     
@@ -28,20 +29,28 @@ class CountriesViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
 
-        
         dbAllInputs = InputManager.main.getAllInputs()
+        let arr = Array(Set(dbAllInputs.map { $0.fullDestination }))
+        
+        currentCountryList = arr.sorted(by: {
+            $0 < $1
+        })
+        
+        DispatchQueue.main.async {
+            self.CountryTableView.reloadData()
+        }
         
         currentCountry = currentState.country
-        currentCountryList = Array(Set(dbAllInputs.map { $0.fullDestination }))
         if currentCountryList.count == 0 {
             currentCountryList.append("No recommendations added")
         }
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        
+
+
         RecommendationsTitle.text = "All Itineraries"
     }
 
@@ -57,6 +66,8 @@ class CountriesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath)
                 
         cell.textLabel?.text = currentCountryList[indexPath.row]
+        
+        print(currentCountryList[indexPath.row])
         if cell.textLabel?.text == "No recommendations added yet." {
             cell.isUserInteractionEnabled = false
         } else {
@@ -81,6 +92,8 @@ class CountriesViewController: UITableViewController {
             let cityv = segue.destination as? CityViewController
             
             let truncated = currentCountryList[tableView.indexPathForSelectedRow!.row].components(separatedBy: "- ")[1]
+            
+            print(truncated)
             
             cityv?.currentCity = truncated
         }

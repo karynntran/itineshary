@@ -18,6 +18,9 @@ class ViewController: UIViewController {
         let bg = BackgroundGradient()
         bg.createGradient(view: view, backgroundView: backgroundView)
         
+        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        print(paths[0])
+        
     }
 
 }

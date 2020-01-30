@@ -422,6 +422,7 @@
                     <connections>
                         <outlet property="CountryBackBtn" destination="cwC-lH-8FP" id="Woc-NP-i4j"/>
                         <outlet property="CountryListTitle" destination="cwC-lH-8FP" id="5pp-fc-JtP"/>
+                        <outlet property="CountryTableView" destination="lQf-G8-DRd" id="hHJ-b7-vYa"/>
                         <outlet property="RecommendationsTitle" destination="Tx1-8K-JYj" id="ACM-cn-Ip0"/>
                     </connections>
                 </tableViewController>
@@ -456,7 +457,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="251"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RecoText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdc-Zc-Vfc">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RecoText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdc-Zc-Vfc">
                                             <rect key="frame" x="18" y="18" width="273" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
